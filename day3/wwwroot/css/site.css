@@ -1,0 +1,27 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.DeptForm {
+  border-radius: 34px;
+  box-shadow: 45px -24px 100px 100px rgba(0,0,0,0.1);
+}
+
+.field-validation-error {
+  color: lightcoral
+}

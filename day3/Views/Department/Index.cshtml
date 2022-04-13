@@ -1,0 +1,59 @@
+﻿@model List<Department>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title>Index</title>
+  <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+
+  <div class="container w-75">
+    <a asp-action="create" asp-controller="department" class="btn btn-primary my-2">Add Department</a>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>
+            Dept id
+          </th>
+          <th>
+            Dept Name
+          </th>
+          <th>
+            Dept Capacity
+          </th>
+          <th>
+            Action
+          </th>
+        </tr>
+
+      </thead>
+      <tbody>
+        @foreach (var item in Model)
+        {
+          <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+            <td>@item.Capacity</td>
+            <td>
+              <a class="btn btn-warning" asp-action="edit"
+                   asp-controller="department" 
+                    asp-route-id="@item.DeptId"> Edit 
+             </a>
+              <a class="btn btn-danger"
+               asp-action="Delete"
+               onclick="return confirm('ARE YOU SURE TO DELETE DEPARTMENT')"
+              asp-route-id="@item.DeptId"> Delete 
+             </a>
+            </td>
+          </tr>
+
+        }
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
