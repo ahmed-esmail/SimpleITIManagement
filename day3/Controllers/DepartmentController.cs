@@ -24,9 +24,17 @@ public class DepartmentController : Controller
   {
     try
     {
-      ITIDb.Departments.Add(dept);
-      ITIDb.SaveChanges();
-      return RedirectToAction("Index");
+      if (ModelState.IsValid)
+      {
+        ITIDb.Departments.Add(dept);
+        ITIDb.SaveChanges();
+        return RedirectToAction("Index");
+      }
+      else
+      {
+        return View(dept);
+      }
+
     }
     catch (Exception)
     {
@@ -48,7 +56,7 @@ public class DepartmentController : Controller
     }
     ITIDb.Departments.Remove(dept);
     ITIDb.SaveChanges();
-    return RedirectToAction(nameof (Index));
+    return RedirectToAction(nameof(Index));
   }
 
   public IActionResult Edit(int? id)

@@ -8,6 +8,7 @@ namespace day3.Models
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public int DeptId { get; set; }
+    [Required]
     public string DeptName { get; set; }
     public int Capacity { get; set; }
 

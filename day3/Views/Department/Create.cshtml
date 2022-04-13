@@ -1,16 +1,9 @@
 ﻿@model Department
 
 
-<!DOCTYPE html>
 
-<html>
-<head>
-  <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="~/css/site.css" />
-  <title>Add</title>
-</head>
-<body>
+
+
   <h2 class="h1 text-center mt-5"> DEPARTMENT ADD</h2>
   @* <form asp-action="create" asp-controller="department"> *@
   @*   <label for="DeptId"> *@
@@ -29,11 +22,12 @@
     <div class="form-group">
       <label asp-for="DeptId">ID</label>
       <input asp-for="DeptId" class="form-control" placeholder="Department ID">
+            <span asp-validation-for=DeptId></span>
+
     </div>
       <partial name="CreateEdit"></partial>
 
     <input class="btn btn-warning mt-3" type="submit" value="Add" />
 
   </form>
-</body>
-</html>
+
