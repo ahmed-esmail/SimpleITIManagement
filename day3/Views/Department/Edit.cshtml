@@ -1,15 +1,17 @@
 ﻿@model Department
 
+@{
+  ViewBag.Title = "Edit Department";
+}
 
+<h1 class="container text-center w-50 mt-5">Edit Department</h1>
+<form class="container m-auto w-50 bg-light border-2 p-5 DeptForm" asp-action=Edit asp-controller="department">
+  <div class="form-group">
+    <label asp-for="DeptId">ID</label>
+    <input asp-for="DeptId" readonly class="form-control" placeholder="Department ID">
+  </div>
+  <partial name="CreateEdit"></partial>
+  <input class="btn btn-warning mt-3" type="submit" value="edit" />
 
-  <h1 class="container text-center w-50 mt-5">Edit Department</h1>
-  <form class="container m-auto w-50 bg-light border-2 p-5 DeptForm" asp-action=Edit asp-controller="department">
-    <div class="form-group">
-      <label asp-for="DeptId" >ID</label>
-      <input asp-for="DeptId" readonly class="form-control" placeholder="Department ID">
-    </div>
-   <partial name="CreateEdit"></partial>
-    <input class="btn btn-warning mt-3" type="submit" value="edit" />
-
-  </form>
+</form>
 
