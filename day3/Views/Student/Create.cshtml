@@ -1,75 +1,73 @@
 ﻿@model Student
 
 
+<h2 class="h1 text-center mt-5"> Add Student</h2>
 
-  <h2 class="h1 text-center mt-5"> Add Student</h2>
-
-  <form enctype="multipart/form-data" class="container m-auto w-50 bg-light border-2 p-5 DeptForm" asp-action="create" asp-controller="student">
+<form enctype="multipart/form-data" class="container m-auto w-50 bg-light border-2 p-5 DeptForm" asp-action="create" asp-controller="student">
 
     <div class="form-group">
-      <label asp-for="Name">Name</label>
-      <input asp-for="Name" class="form-control" placeholder="Student Name">
-      <span asp-validation-for=Name></span>
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Student Name">
+        <span asp-validation-for="Name"></span>
     </div>
 
     <div class="form-group">
-      <label asp-for="UserName">UserName</label>
-      <input asp-for="UserName" class="form-control" placeholder="Student UserName">
-      <span asp-validation-for=UserName></span>
-      <span asp-validation-for=UserName></span>
-
-    </div>
-
-    <div class="form-group">
-      <label asp-for="Age"></label>
-      <input asp-for="Age" class="form-control" placeholder="Student Age">
-      <span asp-validation-for=Age></span>
+        <label asp-for="UserName">UserName</label>
+        <input asp-for="UserName" class="form-control" placeholder="Student UserName">
+        <span asp-validation-for="UserName"></span>
+        <span asp-validation-for="UserName"></span>
 
     </div>
 
     <div class="form-group">
-      <label asp-for="DeptNo">Department</label>
-      <select asp-for="DeptNo" asp-items=ViewBag.depts class="form-control" placeholder="Student Department">
-        <option>select department</option>
-      </select>
-      <span asp-validation-for=DeptNo></span>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" placeholder="Student Age">
+        <span asp-validation-for="Age"></span>
 
     </div>
 
     <div class="form-group">
-      <label asp-for="StdImg">Image</label>
-      <input name="stdimg" type="file" class="form-control" placeholder="Student Image">
-      <span asp-validation-for=StdImg></span>
+        <label asp-for="DeptNo">Department</label>
+        <select asp-for="DeptNo" asp-items="ViewBag.depts" class="form-control" placeholder="Student Department">
+            <option>select department</option>
+        </select>
+        <span asp-validation-for="DeptNo"></span>
 
     </div>
 
     <div class="form-group">
-      <label asp-for="Email">Email</label>
-      <input name="Email" type="email" class="form-control" placeholder="Student Email">
-      <span asp-validation-for=Email></span>
+        <label asp-for="StdImg">Image</label>
+        <input name="stdimg" type="file" class="form-control" placeholder="Student Image">
+        <span asp-validation-for="StdImg"></span>
 
     </div>
 
     <div class="form-group">
-      <label asp-for="Password">Password</label>
-      <input name="Password" type="password" class="form-control" placeholder="Student Password">
-      <span asp-validation-for=Password></span>
+        <label asp-for="Email">Email</label>
+        <input name="Email" type="email" class="form-control" placeholder="Student Email">
+        <span asp-validation-for="Email"></span>
 
     </div>
 
     <div class="form-group">
-      <label asp-for="CPassword">Confirm Password</label>
-      <input name="CPassword" type="password" class="form-control" placeholder="Enter Password Again!">
-      <span asp-validation-for=CPassword></span>
+        <label asp-for="Password">Password</label>
+        <input name="Password" type="password" class="form-control" placeholder="Student Password">
+        <span asp-validation-for="Password"></span>
 
     </div>
-    <div asp-validation-summary=All class="alert alert-info mt-4"></div>
+
+    <div class="form-group">
+        <label asp-for="CPassword">Confirm Password</label>
+        <input name="CPassword" type="password" class="form-control" placeholder="Enter Password Again!">
+        <span asp-validation-for="CPassword"></span>
+
+    </div>
+    <div asp-validation-summary="All" class="alert alert-info mt-4"></div>
 
 
-    <input class="btn btn-warning mt-3" type="submit" value="Add" />
+    <input class="btn btn-warning mt-3" type="submit" value="Add"/>
 
-  </form>
-  <script src="~/lib/jquery/dist/jquery.js"></script>
-  <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
-  <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-
+</form>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

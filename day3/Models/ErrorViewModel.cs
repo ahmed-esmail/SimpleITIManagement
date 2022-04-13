@@ -1,9 +1,8 @@
-namespace day3.Models
+namespace day3.Models;
+
+public class ErrorViewModel
 {
-  public class ErrorViewModel
-  {
     public string? RequestId { get; set; }
 
     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-  }
 }

@@ -2,53 +2,51 @@
 
 
 @{
-  ViewBag.Title = "List Department";
+    ViewBag.Title = "List Department";
 }
 
 <div class="container w-75">
-  <a asp-action="create" asp-controller="department" class="btn btn-primary my-2">Add Department</a>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th>
-          Dept id
-        </th>
-        <th>
-          Dept Name
-        </th>
-        <th>
-          Dept Capacity
-        </th>
-        <th>
-          Action
-        </th>
-      </tr>
-
-    </thead>
-    <tbody>
-      @foreach (var item in Model)
-      {
+    <a asp-action="create" asp-controller="department" class="btn btn-primary my-2">Add Department</a>
+    <table class="table table-bordered table-striped">
+        <thead>
         <tr>
-          <td>@item.DeptId</td>
-          <td>@item.DeptName</td>
-          <td>@item.Capacity</td>
-          <td>
-            <a class="btn btn-warning" asp-action="edit"
-             asp-controller="department"
-             asp-route-id="@item.DeptId">
-              Edit
-            </a>
-            <a class="btn btn-danger"
-             asp-action="Delete"
-             onclick="return confirm('ARE YOU SURE TO DELETE DEPARTMENT')"
-             asp-route-id="@item.DeptId">
-              Delete
-            </a>
-          </td>
+            <th>
+                Dept id
+            </th>
+            <th>
+                Dept Name
+            </th>
+            <th>
+                Dept Capacity
+            </th>
+            <th>
+                Action
+            </th>
         </tr>
 
-      }
-    </tbody>
-  </table>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DeptId</td>
+                <td>@item.DeptName</td>
+                <td>@item.Capacity</td>
+                <td>
+                    <a class="btn btn-warning" asp-action="edit"
+                       asp-controller="department"
+                       asp-route-id="@item.DeptId">
+                        Edit
+                    </a>
+                    <a class="btn btn-danger"
+                       asp-action="Delete"
+                       onclick="return confirm('ARE YOU SURE TO DELETE DEPARTMENT')"
+                       asp-route-id="@item.DeptId">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
 </div>
-

@@ -1,10 +1,9 @@
 
-
 .DeptForm {
-  border-radius: 34px;
-  box-shadow: 45px -24px 100px 100px rgba(0,0,0,0.1);
+    border-radius: 34px;
+    box-shadow: 45px -24px 100px 100px rgba(0, 0, 0, 0.1);
 }
 
 .field-validation-error {
-  color: lightcoral
+    color: lightcoral
 }
