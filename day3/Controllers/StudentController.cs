@@ -26,9 +26,9 @@ public class StudentController : Controller
   [HttpPost]
   public ActionResult Create(Student std, IFormFile stdimg)
   {
-    //if (stdimg == null) ModelState.AddModelError("", "image is required");
+    if (stdimg == null) ModelState.AddModelError("", "image is required");
 
-    if (ModelState.IsValid)
+    if (ModelState.IsValid && stdimg != null)
     {
       DB.Students.Add(std);
       DB.SaveChanges();
@@ -93,9 +93,11 @@ public class StudentController : Controller
   [HttpPost]
   public IActionResult Edit(Student std, IFormFile stdimg)
   {
-    if (stdimg == null) ModelState.AddModelError("", "image is required");
-
-    var fileNameWithExt = Student.SaveImageToServer(stdimg, std);
+    string fileNameWithExt = null;
+    if (stdimg == null)
+      ModelState.AddModelError("", "image is required");
+    else
+      fileNameWithExt = Student.SaveImageToServer(stdimg, std);
 
     var studentInfo = DB.Students.FirstOrDefault(a => a.Id == std.Id);
     studentInfo.StdImg = fileNameWithExt;

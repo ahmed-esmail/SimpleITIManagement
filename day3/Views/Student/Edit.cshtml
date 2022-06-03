@@ -1,37 +1,36 @@
 ﻿@model Student
 
 @{
-    ViewBag.Title = "Edit Student";
+  ViewBag.Title = "Edit Student";
 }
 
 
 <div class="container w-50">
-    <h1 class="text-center">Edit Student</h1>
-    <form enctype="multipart/form-data" class="container m-auto w-75 bg-light border-2 p-5 DeptForm" asp-action="Edit" asp-controller="student">
-        <div class="form-group">
-            <label asp-for="Id">ID</label>
-            <input asp-for="Id" readonly class="form-control" placeholder="ID of Student">
-        </div>
-        <div class="form-group">
-            <label asp-for="Name">Name</label>
-            <input asp-for="Name" class="form-control" placeholder="Name">
-        </div>
+  <h1 class="text-center">Edit Student</h1>
+  <form enctype="multipart/form-data" class="container m-auto w-75 bg-light border-2 p-5 DeptForm" asp-action="Edit" asp-controller="student">
+    <div class="form-group">
+      <label asp-for="Id">ID</label>
+      <input asp-for="Id" readonly class="form-control" placeholder="ID of Student">
+    </div>
+    <div class="form-group">
+      <label asp-for="Name">Name</label>
+      <input asp-for="Name" class="form-control" placeholder="Name">
+    </div>
 
-        <div class="form-group">
-            <label asp-for="Age">Age</label>
-            <input asp-for="Age" class="form-control" placeholder="Age">
-        </div>
+    <div class="form-group">
+      <label asp-for="Age">Age</label>
+      <input asp-for="Age" class="form-control" placeholder="Age">
+    </div>
 
 
+    <div class="form-group">
+      <label asp-for="StdImg">Student Image</label>
+      <input asp-for="StdImg" type="file" class="form-control" placeholder="Student Image">
+    </div>
 
-        <div class="form-group">
-            <label asp-for="StdImg">Student Image</label>
-            <input asp-for="StdImg" type="file" class="form-control" placeholder="Student Image">
-        </div>
+    <input class="btn btn-warning mt-3" type="submit" value="Edit"/>
 
-        <input class="btn btn-warning mt-3" type="submit" value="Edit"/>
-
-    </form>
+  </form>
 </div>
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>

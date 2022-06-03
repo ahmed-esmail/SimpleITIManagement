@@ -5,22 +5,22 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width"/>
-    <title>Delete</title>
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Delete</title>
+  <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"/>
 </head>
 <body>
 <div class="container" style="width:65%;margin:90px auto;height=70%; padding: 10px;">
-    <div class="card">
-        <h1>Confirm deleting of Department @Model.DeptName </h1>
-        <form method="post">
-            <input asp-for="DeptId" type="hidden"/>
+  <div class="card">
+    <h1>Confirm deleting of Department @Model.DeptName </h1>
+    <form method="post">
+      <input asp-for="DeptId" type="hidden"/>
 
-            <div class="m-auto d-flex justify-content-sm-center ">
-                <input type="submit" class="btn btn-primary text-center m-auto" value="Delete"/>
-            </div>
-        </form>
-    </div>
+      <div class="m-auto d-flex justify-content-sm-center ">
+        <input type="submit" class="btn btn-primary text-center m-auto" value="Delete"/>
+      </div>
+    </form>
+  </div>
 </div>
 </body>
 </html>

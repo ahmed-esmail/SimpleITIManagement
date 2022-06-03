@@ -1,11 +1,11 @@
 ﻿@model Department
 
 @{
-    ViewBag.Title = "Create Department";
+  ViewBag.Title = "Create Department";
 }
 
 
-<h2 class="h1 text-center mt-5"> DEPARTMENT ADD</h2>
+<h2 class="h1 text-center mt-5">ADD DEPARTMENT </h2>
 @* <form asp-action="create" asp-controller="department"> *@
 @*   <label for="DeptId"> *@
 @*     ID *@
@@ -20,14 +20,14 @@
 @* </form> *@
 
 <form class="container m-auto w-50 bg-light border-2 p-5 DeptForm" asp-action="create" asp-controller="department">
-    <div class="form-group">
-        <label asp-for="DeptId">ID</label>
-        <input asp-for="DeptId" class="form-control" placeholder="Department ID">
-        <span asp-validation-for="DeptId"></span>
+  <div class="form-group">
+    <label asp-for="DeptId">ID</label>
+    <input asp-for="DeptId" class="form-control" placeholder="Department ID">
+    <span asp-validation-for="DeptId"></span>
 
-    </div>
-    <partial name="CreateEdit"></partial>
+  </div>
+  <partial name="CreateEdit"></partial>
 
-    <input class="btn btn-warning mt-3" type="submit" value="Add"/>
+  <input class="btn btn-warning mt-3" type="submit" value="Add"/>
 
 </form>
