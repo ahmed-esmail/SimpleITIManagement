@@ -1,6 +1,6 @@
 ## SimpleITIManagement
 
-Demo Using (ASP.net Core MVC, Bootstrap, Entity Framwork Core 6, Sql Server)
+Demo Using (ASP.net Core MVC, Bootstrap, Entity Framework Core 6, Sql Server)
 
 ## Demo GIF
 
